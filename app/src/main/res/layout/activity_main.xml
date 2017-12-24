@@ -7,12 +7,82 @@
     tools:context="com.lab3_service.lab3.MainActivity">
 
     <TextView
+        android:id="@+id/fstLine"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="@string/who_are_you"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.109" />
+
+    <EditText
+        android:id="@+id/editName"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="225dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="52dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fstLine" />
+
+    <Switch
+        android:id="@+id/switchService"
+        android:layout_width="244dp"
+        android:layout_height="23dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/mr_service_is_active"
+        app:layout_constraintBottom_toTopOf="@+id/messages"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fstLine"
+        app:layout_constraintVertical_bias="0.766" />
+
+    <TextView
+        android:id="@+id/messages"
+        android:layout_width="337dp"
+        android:layout_height="201dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/messages"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fstLine"
+        app:layout_constraintVertical_bias="0.924" />
+
+    <Button
+        android:id="@+id/send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:shadowColor="@android:color/holo_green_light"
+        android:text="@string/send"
+        android:textColorHighlight="@android:color/holo_green_light"
+        android:textColorLink="@android:color/holo_green_light"
+        app:layout_constraintBottom_toTopOf="@+id/switchService"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toEndOf="@+id/editName"
+        app:layout_constraintTop_toBottomOf="@+id/fstLine"
+        app:layout_constraintVertical_bias="0.676" />
 
 </android.support.constraint.ConstraintLayout>
